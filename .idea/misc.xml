@@ -3,17 +3,32 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable-sw300dp/ic_fifth.xml" value="0.17" />
+        <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable-sw300dp/ic_first.xml" value="0.2405" />
+        <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable-sw300dp/ic_second.xml" value="0.17" />
+        <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable-sw300dp/ic_thrid.xml" value="0.19" />
+        <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable-sw320dp/ic_first.xml" value="0.2465" />
+        <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable-sw360dp/ic_fifth.xml" value="0.2465" />
+        <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable-sw360dp/ic_first.xml" value="0.2465" />
+        <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable-sw360dp/ic_second.xml" value="0.2465" />
+        <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable-sw360dp/ic_thrid.xml" value="0.2465" />
+        <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable-sw400dp/ic_first.xml" value="0.15" />
         <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2465" />
         <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable-w300dp/ic_fifth.xml" value="0.225" />
         <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable-w300dp/ic_first.xml" value="0.224" />
         <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable-w300dp/ic_second.xml" value="0.224" />
         <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable-w300dp/ic_thrid.xml" value="0.224" />
+        <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable-w320dp/ic_fifth.xml" value="0.2465" />
+        <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable-w320dp/ic_first.xml" value="0.2465" />
+        <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable-w320dp/ic_second.xml" value="0.2465" />
+        <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable-w320dp/ic_thrid.xml" value="0.2465" />
         <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable-w360dp/ic_fifth.xml" value="0.2465" />
-        <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable-w360dp/ic_first.xml" value="0.2465" />
+        <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable-w360dp/ic_first.xml" value="0.17" />
         <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable-w360dp/ic_second.xml" value="0.2465" />
         <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable-w360dp/ic_thrid.xml" value="0.2465" />
+        <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable-w400dp/ic_first.xml" value="0.2405" />
         <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable/ic_fifth.xml" value="0.2465" />
-        <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable/ic_first.xml" value="0.2465" />
+        <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable/ic_first.xml" value="0.25" />
         <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable/ic_fourth.xml" value="0.2465" />
         <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable/ic_second.xml" value="0.2465" />
         <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable/ic_thrid.xml" value="0.2465" />

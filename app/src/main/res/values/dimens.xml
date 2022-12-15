@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="space_4">4dp</dimen>
-    <dimen name="icon_50">50dp</dimen>
-    <dimen name="icon_60">50dp</dimen>
+    <dimen name="icon_30">50dp</dimen>
+    <dimen name="icon_100">60dp</dimen>
 </resources>
