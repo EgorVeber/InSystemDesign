@@ -7,4 +7,67 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    //ThemeLight
+    <color name="ColorPrimary">#488dd2</color>
+    <color name="ColorSecondary">#56809f</color>
+    <color name="ColorSecondary60">#9956809F</color>
+    <color name="ColorSecondary40">#6656809F</color>
+    <color name="ColorSecondary20">#3356809F</color>
+    <color name="ColorSecondary10">#1A56809F</color>
+    <color name="ColorTextPrimary">#00325e</color>
+
+    <color name="ColorBackground">#ebeff4</color>
+    <color name="ColorContentBackground">#FFFFFF</color>
+    <color name="ColorBackgroundLight">#Deeffc</color>
+    <color name="ColorGroupBackground">#dbe2eb</color>
+    <color name="ColorSecondaryBackground">#e0edfa</color>
+    <color name="ColorCommerceBackground">#4ab868</color>
+
+    <color name="ColorWarning">#e84444</color>
+    <color name="ColorWarningBackground">#fce8e8</color>
+    <color name="ColorShimmerLight">#f0f2f7</color>
+
+    <color name="ColorSwitchTrackOnDisabled">#b6d1ed</color>
+    <color name="ColorSwitchHandleOnDisabled">#FFFFFF</color>
+
+    //ThemeDark
+    <color name="ColorBackgroundLightDark">#304b66</color>
+    <color name="ColorShimmerDark">#475e78</color>
+    <color name="ColorContentBackgroundDark">#2a3e54</color>
+
+    //ThemeNight
+    <color name="color_shimmer_hight">#191919</color>
+    <color name="ColorBackgroundLightNight">#2b2b2c</color>
+    <color name="ColorContentBackgroundNight">#1c1c1c</color>
+
+
+    //Static
+    <color name="ColorStaticWhite">#FFFFFF</color>
+    <color name="ColorStaticWhite40">#66FFFFFF</color>
+    <color name="ColorStaticWhite20">#33FFFFFF</color>
+    <color name="ColorStaticWhite10">#1AFFFFFF</color>
+    <color name="ColorStaticBlack">#000000</color>
+    <color name="ColorStaticBlack60">#99000000</color>
+    <color name="ColorStaticTransparent">#00000000</color>
+    <color name="ColorStaticRed">#ff3d33</color>
+    <color name="ColorStaticRed10">#1AFF3D33</color>
+    <color name="ColorStaticRedSoft">#d94444</color>
+    <color name="ColorStaticGreen">#4ab868</color>
+    <color name="ColorStaticGreen10">#1A4AB868</color>
+    <color name="ColorStaticViolet">#7a7cc2</color>
+    <color name="ColorStaticPurple">#5c80ff</color>
+    <color name="ColorStaticBlue">#36afe7</color>
+    <color name="ColorStaticTeal">#2aacb3</color>
+    <color name="ColorStaticYellow">#ffb21a</color>
+    <color name="ColorStaticOrange">#ff8965</color>
+    <color name="ColorStaticDarkOrange">#f57c00</color>
+    <color name="ColorStaticDarkOrange10">#1AF57C00</color>
+    <color name="ColorStaticLightBrown">#1AF57C00</color>
+    <color name="ColorStaticPink">#f06291</color>
+    <color name="ColorStaticDarkPink">#c2185c</color>
+
+
+    <color name="ColorGamesControlBackground">#2a4564</color>
+
 </resources>

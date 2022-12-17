@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SkeletonStyleRectanglePrimary8">
+        <item name="android:background">@drawable/skeleton_shape_rectangle8</item>
+        <item name="android:backgroundTint">@color/ColorGroupBackground</item>
+    </style>
+
+    <style name="SkeletonStyleRectanglePrimary16">
+        <item name="android:background">@drawable/skeleton_shape_rectangle16</item>
+        <item name="android:backgroundTint">@color/ColorGroupBackground</item>
+    </style>
+
+    <style name="SkeletonStyleCirclePrimary">
+        <item name="android:background">@drawable/skeleton_shape_circle</item>
+        <item name="android:backgroundTint">@color/ColorGroupBackground</item>
+    </style>
+
+    <style name="SkeletonStyleRectangleSecondary8">
+        <item name="android:background">@drawable/skeleton_shape_rectangle8</item>
+        <item name="android:backgroundTint">@color/ColorContentBackgroundNight</item>
+    </style>
+
+    <style name="SkeletonStyleRectangleSecondary16">
+        <item name="android:background">@drawable/skeleton_shape_rectangle16</item>
+        <item name="android:backgroundTint">@color/ColorContentBackgroundNight</item>
+    </style>
+
+    <style name="SkeletonStyleCircleSecondary">
+        <item name="android:background">@drawable/skeleton_shape_circle</item>
+        <item name="android:backgroundTint">@color/ColorContentBackgroundNight</item>
+    </style>
+
+    <style name="SkeletonStyleRectangleGames8">
+        <item name="android:background">@drawable/skeleton_shape_rectangle8</item>
+        <item name="android:backgroundTint">@color/ColorGamesControlBackground</item>
+    </style>
+
+    <style name="SkeletonStyleRectangleGames16">
+        <item name="android:background">@drawable/skeleton_shape_rectangle16</item>
+        <item name="android:backgroundTint">@color/ColorGamesControlBackground</item>
+    </style>
+
+    <style name="SkeletonStyleCircleGames">
+        <item name="android:background">@drawable/skeleton_shape_circle</item>
+        <item name="android:backgroundTint">@color/ColorGamesControlBackground</item>
+    </style>
+</resources>

@@ -5,17 +5,43 @@ import android.os.Bundle
 import android.util.DisplayMetrics
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import ru.gb.veber.insystemdesign.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+
+
+    private val newsAdapter = SkeletonAdapter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        initView()
+    }
 
+    private fun initView() {
+        binding.recyclerNews.adapter = newsAdapter
+        binding.recyclerNews.layoutManager = LinearLayoutManager(this)
+        newsAdapter.setList(getList())
+    }
+
+
+    fun getList(): List<SkeletonModel> {
+        return listOf(
+            SkeletonModel(),
+            SkeletonModel(),
+            SkeletonModel(),
+            SkeletonModel(),
+            SkeletonModel(),
+            SkeletonModel(),
+            SkeletonModel(),
+            SkeletonModel())
+    }
+
+    fun getWight() {
         val displayMetrics = DisplayMetrics()
         windowManager.defaultDisplay.getMetrics(displayMetrics)
         val width = displayMetrics.widthPixels

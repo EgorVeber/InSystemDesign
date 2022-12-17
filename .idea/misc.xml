@@ -8,6 +8,7 @@
         <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable-sw300dp/ic_second.xml" value="0.17" />
         <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable-sw300dp/ic_thrid.xml" value="0.19" />
         <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable-sw320dp/ic_first.xml" value="0.2465" />
+        <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable-sw360dp/bg_grid_item.xml" value="0.2" />
         <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable-sw360dp/ic_fifth.xml" value="0.2465" />
         <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable-sw360dp/ic_first.xml" value="0.2465" />
         <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable-sw360dp/ic_second.xml" value="0.2465" />
@@ -18,6 +19,8 @@
         <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable-w300dp/ic_first.xml" value="0.224" />
         <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable-w300dp/ic_second.xml" value="0.224" />
         <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable-w300dp/ic_thrid.xml" value="0.224" />
+        <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable-w300dp/shape2.xml" value="0.25" />
+        <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable-w300dp/shape3.xml" value="0.25" />
         <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable-w320dp/ic_fifth.xml" value="0.2465" />
         <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable-w320dp/ic_first.xml" value="0.2465" />
         <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable-w320dp/ic_second.xml" value="0.2465" />
@@ -30,9 +33,18 @@
         <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable/ic_fifth.xml" value="0.2465" />
         <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable/ic_first.xml" value="0.25" />
         <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable/ic_fourth.xml" value="0.2465" />
+        <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2415" />
         <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable/ic_second.xml" value="0.2465" />
         <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable/ic_thrid.xml" value="0.2465" />
-        <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable/shape.xml" value="0.25" />
+        <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable/shape3.xml" value="0.25" />
+        <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable/skeleton_shape_circle.xml" value="0.25" />
+        <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable/skeleton_shape_rectangle16.xml" value="0.25" />
+        <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/layout/activity2.xml" value="1.828125" />
+        <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/layout/skeleton.xml" value="0.33" />
+        <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/layout/skeleton2.xml" value="1.828125" />
+        <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/layout/skeleton_primary_item.xml" value="0.22" />
       </map>
     </option>
   </component>
