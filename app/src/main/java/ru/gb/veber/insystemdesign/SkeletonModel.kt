@@ -3,6 +3,12 @@ package ru.gb.veber.insystemdesign
 import android.content.Context
 import android.util.TypedValue
 
+data class SkeletonModelList(
+    var listSkeleton: List<SkeletonModel>,
+    val colorBackground: SkeletonTypeColor,
+    val margin: Float = 5f,
+)
+
 data class SkeletonModel(
     var name: String? = "",
     val wightDp: Float = 60f,
@@ -53,6 +59,15 @@ fun SkeletonModel.getColor(): Int {
         SkeletonTypeColor.Games -> R.color.ColorBackgroundLightNight
     }
 }
+
+fun SkeletonModelList.getColor(): Int {
+    return when (this.colorBackground) {
+        SkeletonTypeColor.Primary -> R.color.ColorContentBackground
+        SkeletonTypeColor.Secondary -> R.color.ColorBackgroundLightNight
+        SkeletonTypeColor.Games -> R.color.ColorBackgroundLightNight
+    }
+}
+
 
 fun Float.getDp(context: Context): Float {
     return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
