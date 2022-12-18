@@ -4,9 +4,11 @@ import android.content.Context
 import android.util.TypedValue
 
 data class SkeletonModelList(
+    var nameLineView:String,
     var listSkeleton: List<SkeletonModel>,
     val colorBackground: SkeletonTypeColor,
-    val margin: Float = 5f,
+    val margin: Float = 0f,
+    val viewType: Int = 0,
 )
 
 data class SkeletonModel(

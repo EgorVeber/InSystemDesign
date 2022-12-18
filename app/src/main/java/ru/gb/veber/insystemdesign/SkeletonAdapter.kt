@@ -1,15 +1,19 @@
 package ru.gb.veber.insystemdesign
 
-import android.util.Log
+import android.content.ContextWrapper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.ViewGroup.LayoutParams.MATCH_PARENT
+import android.widget.FrameLayout
 import android.widget.LinearLayout
+import android.widget.ListPopupWindow.MATCH_PARENT
+import android.widget.TextView
 import androidx.appcompat.view.ContextThemeWrapper
+import androidx.core.content.ContextCompat
+import androidx.core.view.setMargins
 import androidx.recyclerview.widget.RecyclerView
 import ru.gb.veber.insystemdesign.databinding.SkeletonItemAllBinding
-import ru.gb.veber.insystemdesign.databinding.SkeletonItemBinding
-import ru.gb.veber.insystemdesign.databinding.SkeletoneHeaderBinding
 
 typealias OnUserClickListener = (login: SkeletonModel) -> Unit
 
@@ -24,9 +28,9 @@ class SkeletonAdapter(private val onUserClickListener: OnUserClickListener) :
         notifyDataSetChanged()
     }
 
-//    override fun getItemViewType(position: Int): Int {
-//        return skeletonList[position].viewType
-//    }
+    override fun getItemViewType(position: Int): Int {
+        return skeletonList[position].viewType
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder {
         return SkeletonListViewHolder(SkeletonItemAllBinding.inflate(LayoutInflater.from(parent.context),
@@ -49,39 +53,42 @@ class SkeletonListViewHolder(
 
     override fun bind(item: SkeletonModelList) = with(binding) {
 
-        binding.rootContainerView.setBackgroundResource(item.getColor())
+        if (itemViewType == SKELETON_TYPE) {
 
 
-        item.listSkeleton.forEach {skeletonItem->
+            binding.rootContainerView.setBackgroundResource(item.getColor())
+            item.listSkeleton.forEachIndexed { index, skeletonItem ->
+                var marginSkeleton =
+                    if (index == item.listSkeleton.size - 1) skeletonItem.margin.getDp(itemView.context)
+                        .toInt() else 0
 
+                val skeletonView =
+                    View(ContextThemeWrapper(itemView.context, skeletonItem.getStyle()), null, 0)
+                skeletonView.layoutParams =
+                    LinearLayout.LayoutParams(skeletonItem.wightDp.getDp(itemView.context).toInt(),
+                        skeletonItem.heightDp.getDp(itemView.context).toInt())
+                (skeletonView.layoutParams as LinearLayout.LayoutParams).setMargins(
+                    skeletonItem.margin.getDp(itemView.context).toInt(),
+                    skeletonItem.margin.getDp(itemView.context).toInt(),
+                    marginSkeleton,
+                    skeletonItem.margin.getDp(itemView.context).toInt())
 
-            var marginSkeleton = when (skeletonItem.skeletonShape) {
-                SkeletonShape.SkeletonCirclePrimary -> skeletonItem.margin.getDp(itemView.context).toInt()
-                SkeletonShape.SkeletonCircleSecondary -> skeletonItem.margin.getDp(itemView.context).toInt()
-                SkeletonShape.SkeletonCircleGames -> skeletonItem.margin.getDp(itemView.context).toInt()
-                else -> {
-                    0
+                skeletonView.setOnLongClickListener {
+                    onUserClickListener.invoke(skeletonItem)
+                    true
                 }
+
+                rootContainerView.addView(skeletonView)
             }
-
-            Log.d("marginSkeleton", "$marginSkeleton skeletonItem = $skeletonItem")
-
-            val skeletonView = View(ContextThemeWrapper(itemView.context, skeletonItem.getStyle()), null, 0)
-            skeletonView.layoutParams =
-                LinearLayout.LayoutParams(skeletonItem.wightDp.getDp(itemView.context).toInt(),
-                    skeletonItem.heightDp.getDp(itemView.context).toInt())
-            (skeletonView.layoutParams as LinearLayout.LayoutParams).setMargins(
-                skeletonItem.margin.getDp(itemView.context).toInt(),
-                skeletonItem.margin.getDp(itemView.context).toInt(),
-                marginSkeleton,
-                skeletonItem.margin.getDp(itemView.context).toInt())
-
-            skeletonView.setOnLongClickListener {
-                onUserClickListener.invoke(skeletonItem)
-                true
-            }
-
-            rootContainerView.addView(skeletonView)
+        } else {
+            var skeletonHeaderView = TextView(rootContainerView.context)
+            skeletonHeaderView.text = item.nameLineView
+            skeletonHeaderView.setTextColor(ContextCompat.getColor(itemView.context,
+                R.color.ColorTextPrimary))
+            skeletonHeaderView.textSize = 25f
+            skeletonHeaderView.layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,FrameLayout.LayoutParams.WRAP_CONTENT)
+            (skeletonHeaderView.layoutParams as LinearLayout.LayoutParams).marginStart = item.margin.getDp(itemView.context).toInt()
+            rootContainerView.addView(skeletonHeaderView)
         }
     }
 }
@@ -126,12 +133,8 @@ abstract class BaseViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     abstract fun bind(item: SkeletonModelList)
 
     companion object {
-        const val VIEW_TYPE_TOP_NEWS = 0
-        const val VIEW_TYPE_TOP_NEWS_HEADER = 1
-        const val VIEW_TYPE_SEARCH_NEWS = 2
-        const val VIEW_TYPE_FAVORITES_NEWS = 3
-        const val VIEW_TYPE_HISTORY_NEWS = 4
-        const val VIEW_TYPE_HISTORY_HEADER = 5
+        const val SKELETON_TYPE = 0
+        const val SKELETON_HEADER_TYPE = 1
     }
 }
 

@@ -1,8 +1,5 @@
 package ru.gb.veber.insystemdesign
 
-import android.content.res.Configuration
-import android.util.DisplayMetrics
-import android.util.Log
 
 object RepoSkeletonModel {
     fun getList(): List<SkeletonModel> {
@@ -62,8 +59,8 @@ object RepoSkeletonModel {
     }
 
     fun getListAll(): List<SkeletonModelList> {
-        return listOf(
-            SkeletonModelList(
+        return listOf(SkeletonModelList("Primary", listOf(),SkeletonTypeColor.Primary, margin = 25f, viewType = 1),
+            SkeletonModelList("Primary",
                 listOf(
                     SkeletonModel(
                         colorShape = "#dbe2eb",
@@ -78,7 +75,8 @@ object RepoSkeletonModel {
                         skeletonShape = SkeletonShape.SkeletonCirclePrimary,
                         colorBackground = SkeletonTypeColor.Primary)),
                 SkeletonTypeColor.Primary),
-            SkeletonModelList(
+            SkeletonModelList("Secondary", listOf(),SkeletonTypeColor.Secondary, margin = 25f, viewType = 1),
+            SkeletonModelList("Secondary",
                 listOf(
                     SkeletonModel(
                         colorShape = "#1c1c1c",
@@ -93,7 +91,8 @@ object RepoSkeletonModel {
                         skeletonShape = SkeletonShape.SkeletonCircleSecondary,
                         colorBackground = SkeletonTypeColor.Secondary)),
                 SkeletonTypeColor.Secondary),
-            SkeletonModelList(
+            SkeletonModelList("Games", listOf(),SkeletonTypeColor.Games, margin = 25f, viewType = 1),
+            SkeletonModelList("Games",
                 listOf(
                     SkeletonModel(
                         colorShape = "#2a4564",
