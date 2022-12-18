@@ -1,20 +1,13 @@
 package ru.gb.veber.insystemdesign
 
-
-import android.graphics.Color
-import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
-import androidx.annotation.ColorInt
 import androidx.appcompat.view.ContextThemeWrapper
-import androidx.core.view.setMargins
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.color.MaterialColors
 import ru.gb.veber.insystemdesign.databinding.EmptyViewBinding
 import ru.gb.veber.insystemdesign.databinding.SkeletoneHeaderBinding
-
 
 typealias OnUserClickListener = (login: SkeletonModel) -> Unit
 
@@ -65,6 +58,16 @@ class SkeletonViewHolder(
         item.name = item.skeletonShape.name
         binding.root.setBackgroundResource(item.getColor())
 
+        var marginSkeleton = 0
+        marginSkeleton = when (item.skeletonShape) {
+            SkeletonShape.SkeletonCirclePrimary -> item.margin.getDp(itemView.context).toInt()
+            SkeletonShape.SkeletonCircleSecondary -> item.margin.getDp(itemView.context).toInt()
+            SkeletonShape.SkeletonCircleGames -> item.margin.getDp(itemView.context).toInt()
+            else -> {
+                0
+            }
+        }
+
 
         root.addView(
             View(ContextThemeWrapper(itemView.context, item.getStyle()),
@@ -73,7 +76,8 @@ class SkeletonViewHolder(
                 layoutParams =
                     LinearLayout.LayoutParams(item.wightDp.getDp(itemView.context).toInt(),
                         item.heightDp.getDp(itemView.context).toInt())
-                (layoutParams as LinearLayout.LayoutParams).setMargins(item.margin.getDp(itemView.context).toInt())
+                (layoutParams as LinearLayout.LayoutParams).setMargins(
+                    item.margin.getDp(itemView.context).toInt(),item.margin.getDp(itemView.context).toInt(),0,item.margin.getDp(itemView.context).toInt())
                 setOnLongClickListener {
                     onUserClickListener.invoke(item)
                     true

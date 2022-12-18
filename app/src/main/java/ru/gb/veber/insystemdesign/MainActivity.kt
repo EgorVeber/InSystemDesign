@@ -13,7 +13,7 @@ import ru.gb.veber.insystemdesign.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
-    private val newsAdapter = SkeletonAdapter {
+    private val skeletonAdapter = SkeletonAdapter {
         Toast.makeText(this,getToastModel(it), Toast.LENGTH_LONG).show()
     }
 
@@ -30,9 +30,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initView() {
-        binding.recyclerNews.adapter = newsAdapter
-
-        binding.recyclerNews.layoutManager = GridLayoutManager(this, 3)
+        binding.recyclerNews.adapter = skeletonAdapter
+        var x = GridLayoutManager(this, 3,GridLayoutManager.VERTICAL,false)
+        binding.recyclerNews.layoutManager = x
             .apply {
                 spanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
                     override fun getSpanSize(position: Int): Int {
@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
             }
-        newsAdapter.setList(getList())
+       skeletonAdapter.setList(getList())
     }
 
     private fun getList(): List<SkeletonModel> {
@@ -130,4 +130,5 @@ class MainActivity : AppCompatActivity() {
         Log.d("TAG", "screenWidthDp = $screenWidthDp")
         Log.d("TAG", "smallestScreenWidthDp = $smallestScreenWidthDp")
     }
+
 }
