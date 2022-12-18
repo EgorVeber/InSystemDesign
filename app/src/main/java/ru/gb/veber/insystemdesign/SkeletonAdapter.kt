@@ -1,10 +1,18 @@
 package ru.gb.veber.insystemdesign
 
-import android.annotation.SuppressLint
+
+import android.util.Log
+import android.util.TypedValue
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
+import androidx.appcompat.view.ContextThemeWrapper
+import androidx.core.view.marginBottom
+import androidx.core.view.setMargins
 import androidx.recyclerview.widget.RecyclerView
-import ru.gb.veber.insystemdesign.databinding.SkeletonPrimaryItemBinding
+import ru.gb.veber.insystemdesign.databinding.EmptyViewBinding
+
 
 class SkeletonAdapter() : RecyclerView.Adapter<SourcesViewHolder>() {
 
@@ -15,9 +23,8 @@ class SkeletonAdapter() : RecyclerView.Adapter<SourcesViewHolder>() {
         notifyDataSetChanged()
     }
 
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SourcesViewHolder {
-        return SourcesViewHolder(SkeletonPrimaryItemBinding.inflate(LayoutInflater.from(parent.context),
+        return SourcesViewHolder(EmptyViewBinding.inflate(LayoutInflater.from(parent.context),
             parent,
             false))
     }
@@ -30,11 +37,30 @@ class SkeletonAdapter() : RecyclerView.Adapter<SourcesViewHolder>() {
 }
 
 class SourcesViewHolder(
-    private val binding: SkeletonPrimaryItemBinding,
+    private val binding: EmptyViewBinding,
 ) : RecyclerView.ViewHolder(binding.root) {
 
-    @SuppressLint("SetTextI18n")
     fun bind(item: SkeletonModel) = with(binding) {
+        var x = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 65f, itemView.context.resources.displayMetrics)
+        var margin = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 25f, itemView.context.resources.displayMetrics)
+        val b = View(ContextThemeWrapper(itemView.context, R.style.SkeletonStyleRectangleGames16), null, 0).apply {
+            layoutParams = LinearLayout.LayoutParams(x.toInt(),x.toInt())
+            setOnClickListener{
+                Log.d("TAG", position.toString())
+            }
+            (layoutParams as LinearLayout.LayoutParams).setMargins(margin.toInt())
+        }
+
+       root.addView(b)
+//        val someLayout: View = View(root.context, AttributeSet,0,ContextWrapper R.style.SkeletonStyleCircleGames))
+//
+//
+//        val myButton = Button(root.context, null, 0)
+//        myButton.layoutParams = LinearLayout.LayoutParams(
+//            LinearLayout.LayoutParams.MATCH_PARENT,
+//            LinearLayout.LayoutParams.MATCH_PARENT)
+//        root.addView(myButton)
+
 
 //        if (item.isLike) imageFavorites.setImageResource(R.drawable.ic_favorite_36_active)
 //        else imageFavorites.setImageResource(R.drawable.ic_favorite_36)

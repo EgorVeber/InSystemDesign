@@ -5,7 +5,7 @@
     android:orientation="vertical">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/ColorContentBackground">
 
@@ -13,23 +13,23 @@
             style="@style/SkeletonStyleRectanglePrimary8"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:layout_margin="10dp" />
+            android:layout_margin="25dp" />
 
         <View
             style="@style/SkeletonStyleRectanglePrimary16"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:layout_margin="10dp" />
+            android:layout_margin="25dp" />
 
         <View
             style="@style/SkeletonStyleCirclePrimary"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:layout_margin="10dp" />
+            android:layout_margin="25dp" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/ColorBackgroundLightNight">
 
@@ -37,22 +37,23 @@
             style="@style/SkeletonStyleRectangleSecondary8"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:layout_margin="10dp" />
+            android:layout_margin="25dp" />
 
         <View
             style="@style/SkeletonStyleRectangleSecondary16"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:layout_margin="10dp" />
+            android:layout_margin="25dp" />
 
         <View
             style="@style/SkeletonStyleCircleSecondary"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:layout_margin="10dp" />
+            android:layout_margin="25dp" />
     </LinearLayout>
+
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/ColorBackgroundLightNight">
 
@@ -60,18 +61,18 @@
             style="@style/SkeletonStyleRectangleGames8"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:layout_margin="10dp" />
+            android:layout_margin="25dp" />
 
         <View
             style="@style/SkeletonStyleRectangleGames16"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:layout_margin="10dp" />
+            android:layout_margin="25dp" />
 
         <View
             style="@style/SkeletonStyleCircleGames"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:layout_margin="10dp" />
+            android:layout_margin="25dp" />
     </LinearLayout>
 </LinearLayout>
