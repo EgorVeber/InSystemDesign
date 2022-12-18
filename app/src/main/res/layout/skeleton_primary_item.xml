@@ -10,43 +10,19 @@
         android:background="@color/ColorContentBackground">
 
         <View
-            style="@style/SkeletonStyleRectanglePrimary8"
+            style="@style/SkeletonRectangleSmallPrimary"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_margin="25dp" />
 
         <View
-            style="@style/SkeletonStyleRectanglePrimary16"
+            style="@style/SkeletonRectangleMediumPrimary"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_margin="25dp" />
 
         <View
-            style="@style/SkeletonStyleCirclePrimary"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_margin="25dp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/ColorBackgroundLightNight">
-
-        <View
-            style="@style/SkeletonStyleRectangleSecondary8"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_margin="25dp" />
-
-        <View
-            style="@style/SkeletonStyleRectangleSecondary16"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_margin="25dp" />
-
-        <View
-            style="@style/SkeletonStyleCircleSecondary"
+            style="@style/SkeletonCirclePrimary"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_margin="25dp" />
@@ -58,19 +34,43 @@
         android:background="@color/ColorBackgroundLightNight">
 
         <View
-            style="@style/SkeletonStyleRectangleGames8"
+            style="@style/SkeletonRectangleSmallSecondary"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_margin="25dp" />
 
         <View
-            style="@style/SkeletonStyleRectangleGames16"
+            style="@style/SkeletonRectangleMediumSecondary"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_margin="25dp" />
 
         <View
-            style="@style/SkeletonStyleCircleGames"
+            style="@style/SkeletonCirclePrimarySecondary"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="25dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/ColorBackgroundLightNight">
+
+        <View
+            style="@style/SkeletonRectangleSmallGames"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="25dp" />
+
+        <View
+            style="@style/SkeletonRectangleMediumGames"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="25dp" />
+
+        <View
+            style="@style/SkeletonCirclePrimaryGames"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_margin="25dp" />

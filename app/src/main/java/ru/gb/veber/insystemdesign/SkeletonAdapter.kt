@@ -1,89 +1,108 @@
 package ru.gb.veber.insystemdesign
 
 
-import android.util.Log
+import android.graphics.Color
 import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import androidx.annotation.ColorInt
 import androidx.appcompat.view.ContextThemeWrapper
-import androidx.core.view.marginBottom
 import androidx.core.view.setMargins
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.color.MaterialColors
 import ru.gb.veber.insystemdesign.databinding.EmptyViewBinding
+import ru.gb.veber.insystemdesign.databinding.SkeletoneHeaderBinding
 
 
-class SkeletonAdapter() : RecyclerView.Adapter<SourcesViewHolder>() {
+typealias OnUserClickListener = (login: SkeletonModel) -> Unit
 
-    var sources: List<SkeletonModel> = emptyList()
+
+class SkeletonAdapter(private val onUserClickListener: OnUserClickListener) :
+    RecyclerView.Adapter<BaseViewHolder>() {
+
+    var skeletonList: List<SkeletonModel> = emptyList()
 
     fun setList(list: List<SkeletonModel>) {
-        sources = list
+        skeletonList = list
         notifyDataSetChanged()
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SourcesViewHolder {
-        return SourcesViewHolder(EmptyViewBinding.inflate(LayoutInflater.from(parent.context),
-            parent,
-            false))
+    override fun getItemViewType(position: Int): Int {
+        return skeletonList[position].viewType
     }
 
-    override fun onBindViewHolder(holder: SourcesViewHolder, position: Int) {
-        holder.bind(sources[position])
-    }
-
-    override fun getItemCount() = sources.size
-}
-
-class SourcesViewHolder(
-    private val binding: EmptyViewBinding,
-) : RecyclerView.ViewHolder(binding.root) {
-
-    fun bind(item: SkeletonModel) = with(binding) {
-        var x = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 65f, itemView.context.resources.displayMetrics)
-        var margin = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 25f, itemView.context.resources.displayMetrics)
-        val b = View(ContextThemeWrapper(itemView.context, R.style.SkeletonStyleRectangleGames16), null, 0).apply {
-            layoutParams = LinearLayout.LayoutParams(x.toInt(),x.toInt())
-            setOnClickListener{
-                Log.d("TAG", position.toString())
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder {
+        return when (viewType) {
+            0 -> SkeletonViewHolder(EmptyViewBinding.inflate(LayoutInflater.from(parent.context),
+                parent,
+                false), onUserClickListener)
+            1 -> SkeletonHeaderViewHolder(SkeletoneHeaderBinding.inflate(LayoutInflater.from(parent.context),
+                parent,
+                false))
+            else -> {
+                SkeletonViewHolder(EmptyViewBinding.inflate(LayoutInflater.from(parent.context),
+                    parent,
+                    false), onUserClickListener)
             }
-            (layoutParams as LinearLayout.LayoutParams).setMargins(margin.toInt())
         }
+    }
 
-       root.addView(b)
-//        val someLayout: View = View(root.context, AttributeSet,0,ContextWrapper R.style.SkeletonStyleCircleGames))
-//
-//
-//        val myButton = Button(root.context, null, 0)
-//        myButton.layoutParams = LinearLayout.LayoutParams(
-//            LinearLayout.LayoutParams.MATCH_PARENT,
-//            LinearLayout.LayoutParams.MATCH_PARENT)
-//        root.addView(myButton)
+    override fun onBindViewHolder(holder: BaseViewHolder, position: Int) {
+        holder.bind(skeletonList[position])
+    }
+
+    override fun getItemCount() = skeletonList.size
+}
+
+class SkeletonViewHolder(
+    private val binding: EmptyViewBinding,
+    private val onUserClickListener: OnUserClickListener,
+) : BaseViewHolder(binding.root) {
+
+    override fun bind(item: SkeletonModel) = with(binding) {
+        item.name = item.skeletonShape.name
+        binding.root.setBackgroundResource(item.getColor())
 
 
-//        if (item.isLike) imageFavorites.setImageResource(R.drawable.ic_favorite_36_active)
-//        else imageFavorites.setImageResource(R.drawable.ic_favorite_36)
-//
-//        name.text = item.name
-//        description.text = item.description
-//        category.text = item.category
-//        language.text = item.language
-//        country.text = item.country
-//        totalFavorites.text = item.totalFavorites.toString()
-//        totalHistory.text = item.totalHistory.toString()
-//
-//
-//        openNewsSources.setOnClickListener {
-//            listener.newsClick(item.idSources, item.name)
-//        }
-//
-//        openWebSiteSources.setOnClickListener {
-//            listener.openUrl(item.url)
-//        }
-//
-//        imageFavorites.setOnClickListener {
-//            listener.imageClick(item)
-//        }
+        root.addView(
+            View(ContextThemeWrapper(itemView.context, item.getStyle()),
+                null,
+                0).apply {
+                layoutParams =
+                    LinearLayout.LayoutParams(item.wightDp.getDp(itemView.context).toInt(),
+                        item.heightDp.getDp(itemView.context).toInt())
+                (layoutParams as LinearLayout.LayoutParams).setMargins(item.margin.getDp(itemView.context).toInt())
+                setOnLongClickListener {
+                    onUserClickListener.invoke(item)
+                    true
+                }
+            }
+        )
     }
 }
+
+class SkeletonHeaderViewHolder(
+    private val binding: SkeletoneHeaderBinding,
+) : BaseViewHolder(binding.root) {
+
+    override fun bind(item: SkeletonModel) {
+        binding.textViewHeader.text = item.name
+    }
+}
+
+abstract class BaseViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    abstract fun bind(item: SkeletonModel)
+
+    companion object {
+        const val VIEW_TYPE_TOP_NEWS = 0
+        const val VIEW_TYPE_TOP_NEWS_HEADER = 1
+        const val VIEW_TYPE_SEARCH_NEWS = 2
+        const val VIEW_TYPE_FAVORITES_NEWS = 3
+        const val VIEW_TYPE_HISTORY_NEWS = 4
+        const val VIEW_TYPE_HISTORY_HEADER = 5
+    }
+}
+
+

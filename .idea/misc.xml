@@ -40,12 +40,14 @@
         <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable/shape3.xml" value="0.25" />
         <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable/skeleton_shape_circle.xml" value="0.25" />
         <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable/skeleton_shape_rectangle16.xml" value="0.25" />
+        <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/drawable/skeleton_shape_rectangle8.xml" value="0.25" />
         <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/layout/activity2.xml" value="1.828125" />
-        <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/layout/empty_view.xml" value="0.2" />
+        <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/layout/activity_main.xml" value="0.67" />
+        <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/layout/empty_view.xml" value="0.25" />
         <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/layout/skeleton.xml" value="0.33" />
         <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/layout/skeleton2.xml" value="1.828125" />
         <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/layout/skeleton_primary_item.xml" value="0.33" />
+        <entry key="..\:/AndroidProject/InSystem/InSystemDesign/app/src/main/res/layout/skeletone_header.xml" value="0.67" />
       </map>
     </option>
   </component>
